@@ -1,0 +1,315 @@
+
+
+body{
+	margin:0;
+	padding:0;
+	background-color:gray;
+	font-family: 'Open Sans Condensed', sans-serif;
+	overflow:hidden;
+}
+
+.principal{
+	display:block;
+	margin:0 auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: auto;
+	height: 35em;
+	transition:all 1s;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    vertical-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:absolute;
+}
+
+.button1{
+	padding-top:8px;
+	left:2px;
+	font-size:10px;
+	height:25px;
+}
+
+.button2{
+	padding-top:8px;
+	left:97px;
+	background-color:red;
+	color:black;
+	font-size:10px;
+	height:25px;
+}
+
+.button3{
+	padding-top:8px;
+	left:186px;
+	background-color:white;
+	color:black;
+	font-size:10px;
+	height:25px;
+}
+
+.info{
+	background-color:black;
+	margin:0 auto;
+	width:100%;
+	height:calc(100vh - 35em - 10px);
+	opacity:0.5;
+	display: flex;
+	justify-content: center;
+}
+
+h1{
+	position: absolute;
+    .cajap.top:;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width:100%;
+    font-weight: lighter;
+    transition:all 1s;
+}
+
+.cajaimg{
+	display:flex;
+	justify-content:center;
+	width:100%;
+	height:80px;
+	margin-top:35px;
+	width:100%;
+}
+
+.mini{
+	margin:5px;
+	width:100px;
+	object-fit: cover;
+}
+
+#ant{
+	left:3em;
+	top:15em;
+	z-index:2;
+	transition:all 1s;
+}
+
+#next{
+	right:3em;
+	top:15em;
+	z-index:2;
+	transition:all 1s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: 80vh;
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+@media all and (max-width: 960px){
+	.principal{
+		height:20em;
+		transition:all 1s;
+	}
+	.info{
+		height:calc(100vh - 20em - 10px);
+	}
+	h1{
+		font-size:160%;
+		top:47vh;
+		transition:all 1s;
+	}
+	.cajaimg{
+		flex-wrap: wrap;
+		width:80%;
+		justify-content: center;
+		margin:0 auto;
+		margin-top: 35px;
+	}
+	.mini{
+		width:120px;
+		height:60px;
+	}
+	#ant{
+	top:8em;
+	bottom:auto;
+	transition:all 1s;
+	}
+
+	#next{
+	top:8em;
+	bottom:auto;
+	transition:all 1s;
+	}
+	#dark{
+		bottom:2em;
+		z-index:2;
+	}
+
+	#red{
+		bottom:2em;
+		z-index:2;
+	}
+
+	#basic{
+		bottom:2em;
+		z-index:2;
+	}
+	.modal-content {
+	    margin: auto;
+	    display: block;
+	    width: 100vw;
+	    height: auto;
+	}
+}
+@media all and (max-width: 480px){
+	.principal{
+		display: flex;
+		margin:0;
+		height:50vh;
+		width:auto;
+		object-fit:cover;
+		transition:all 1s;
+	}
+	h1{
+		font-size:160%;
+		top:51vh;
+		transition:all 1s;
+	}
+	.info{
+		height:50vh;
+	}
+	.cajaimg{
+		margin:0 auto;
+		width:90%;
+		height: 12em;
+		align-self: center;
+	}
+	.mini{
+		width:110px;
+		height:50px;
+		object-fit: cover;
+	}
+	#ant{
+	top:auto;
+	bottom:0.40em;
+	transition:all 1s;
+	}
+
+	#next{
+	top:auto;
+	bottom:0.40em;
+	transition:all 1s;
+	}
+
+	#dark{
+		left:0;
+		top:50em;
+		width:3px;
+		font-size:50%;
+		z-index:2;
+	}
+
+	#red{
+		left:70px;
+		top:50em;
+		width:3px;
+		font-size:50%;
+		z-index:2;
+	}
+
+	#basic{
+		left:140px;
+		top:50em;
+		width:3px;
+		font-size:50%;
+		z-index:2;
+	}
+	
+	.modal-content {
+	    margin: auto;
+	    display: block;
+	    width: 100vw;
+	    height: auto;
+	}
+}
